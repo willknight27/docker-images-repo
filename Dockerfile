@@ -10,5 +10,8 @@ RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
 
 RUN yum --enablerepo=remi-php73 -y install php php-bcmath php-cli php-common php-gd php-intl php-ldap php-mbstring \ 
     php-mysqlnd php-pear php-soap php-xml php-xmlrpc php-zip
+
+
+#exponer puerto 80
 EXPOSE 80
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
